@@ -21,21 +21,21 @@ width:100%;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:25px 0;
-background:rgba(255,255,255,0.9);
+padding:30px 0;
+background:rgba(255,255,255,0.95);
 backdrop-filter:blur(12px);
 z-index:1000;
 transition:0.3s;
 }
 
 header img{
-height:130px;
+height:170px;
 transition:0.3s ease;
 }
 
 /* HERO */
 .hero{
-padding:260px 20px 140px;
+padding:320px 20px 140px;
 text-align:center;
 background:#f8f9fc;
 }
@@ -87,17 +87,17 @@ background:red;
 color:#fff;
 }
 
-/* SERVICES */
+/* SECTION */
 .section{
 padding:120px 20px;
-max-width:1200px;
+max-width:1100px;
 margin:auto;
 text-align:center;
 }
 
 .section h2{
 font-size:38px;
-margin-bottom:60px;
+margin-bottom:50px;
 }
 
 .grid{
@@ -127,6 +127,63 @@ object-fit:contain;
 margin-bottom:20px;
 }
 
+/* FORM */
+.form-box{
+max-width:600px;
+margin:auto;
+}
+
+.form-box input,
+.form-box textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ddd;
+font-family:inherit;
+}
+
+.form-box button{
+background:red;
+color:#fff;
+padding:14px;
+border:none;
+border-radius:30px;
+width:100%;
+font-weight:600;
+cursor:pointer;
+}
+
+.form-box button:hover{
+background:#cc0000;
+}
+
+/* FAQ */
+.faq-box{
+max-width:800px;
+margin:20px auto;
+text-align:left;
+}
+
+.faq-item{
+border-bottom:1px solid #ddd;
+padding:18px 0;
+cursor:pointer;
+}
+
+.faq-question{
+display:flex;
+justify-content:space-between;
+font-weight:600;
+font-size:18px;
+}
+
+.faq-answer{
+display:none;
+padding-top:10px;
+color:#555;
+}
+
 /* CONTACT */
 .contact-section{
 padding:120px 20px;
@@ -144,7 +201,7 @@ font-size:18px;
 margin:10px 0;
 }
 
-/* DARK FOOTER */
+/* FOOTER */
 footer{
 background:#000;
 color:#fff;
@@ -180,17 +237,10 @@ font-size:14px;
 color:#888;
 }
 
-/* MOBILE */
 @media(max-width:768px){
-.hero h1{
-font-size:30px;
-}
-.card{
-width:90%;
-}
-header img{
-height:100px;
-}
+.hero h1{font-size:30px;}
+.card{width:90%;}
+header img{height:140px;}
 }
 </style>
 </head>
@@ -204,7 +254,6 @@ height:100px;
 <div class="hero">
 <h1>Safe • Fast • Reliable Vehicle Transport Across India</h1>
 <p>Door-to-Door Car & Bike Transport Services with Insurance & Professional Handling</p>
-
 <div class="hero-buttons">
 <a href="tel:9896505929" class="btn btn-call">Call Now</a>
 <a href="https://wa.me/919896505929" class="btn btn-whatsapp">WhatsApp</a>
@@ -214,25 +263,64 @@ height:100px;
 <div class="section">
 <h2>Our Services</h2>
 <div class="grid">
-
 <div class="card">
-<img src="car.png" alt="Car Transport">
+<img src="car.png">
 <h3>Car Transport</h3>
 <p>Safe & insured car carrier services across India.</p>
 </div>
-
 <div class="card">
-<img src="bike.png" alt="Bike Transport">
+<img src="bike.png">
 <h3>Bike Transport</h3>
 <p>Professional packing and secure delivery.</p>
 </div>
-
 <div class="card">
-<img src="house.png" alt="Household Shifting">
+<img src="house.png">
 <h3>Household Shifting</h3>
 <p>Reliable relocation solutions with trained staff.</p>
 </div>
+</div>
+</div>
 
+<div class="section">
+<h2>About Us</h2>
+<p>Logistics Go Packers and Movers is one of the most trusted names in the logistics and relocation industry...</p>
+<p><strong>Head Office:</strong> Gurugram, Haryana, India</p>
+</div>
+
+<div class="section">
+<h2>Why Choose Us</h2>
+<div class="grid">
+<div class="card"><h3>Safe & Secure</h3><p>Professional packing material and trained staff.</p></div>
+<div class="card"><h3>On-Time Delivery</h3><p>Timely pickup and delivery across India.</p></div>
+<div class="card"><h3>Affordable Pricing</h3><p>Transparent pricing with no hidden charges.</p></div>
+</div>
+</div>
+
+<div class="section">
+<h2>Get a FREE Quote</h2>
+<div class="form-box">
+<form action="https://formsubmit.co/logisticsgopvtltd@gmail.com" method="POST">
+<input type="hidden" name="_captcha" value="false">
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="email" name="Email" placeholder="Your Email" required>
+<input type="text" name="Mobile" placeholder="Your Mobile Number" required>
+<textarea name="Message" placeholder="Your Requirement" required></textarea>
+<button type="submit">Submit Enquiry</button>
+</form>
+</div>
+</div>
+
+<div class="section">
+<h2>FAQs</h2>
+<div class="faq-box">
+<div class="faq-item">
+<div class="faq-question">Why choose Logistics Go? <span>+</span></div>
+<div class="faq-answer">We provide quality packing and professional service.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Is insurance available? <span>+</span></div>
+<div class="faq-answer">Yes, insurance options are available for goods safety.</div>
+</div>
 </div>
 </div>
 
@@ -245,12 +333,10 @@ height:100px;
 <footer>
 <h3>LogisticsGo</h3>
 <p>Safe • Fast • Reliable Vehicle Transport</p>
-
 <div class="footer-contact">
 <span>📞 9896505929</span>
 <span>✉ logisticsgopvtltd@gmail.com</span>
 </div>
-
 <div class="copyright">
 © 2026 LogisticsGo. All Rights Reserved.
 </div>
@@ -260,10 +346,24 @@ height:100px;
 window.addEventListener("scroll", function() {
   const logo = document.getElementById("logo");
   if (window.scrollY > 50) {
-    logo.style.height = "80px";
-  } else {
     logo.style.height = "130px";
+  } else {
+    logo.style.height = "170px";
   }
+});
+
+document.querySelectorAll(".faq-item").forEach(item => {
+  item.addEventListener("click", () => {
+    const answer = item.querySelector(".faq-answer");
+    const symbol = item.querySelector("span");
+    if(answer.style.display === "block"){
+      answer.style.display = "none";
+      symbol.textContent = "+";
+    } else {
+      answer.style.display = "block";
+      symbol.textContent = "-";
+    }
+  });
 });
 </script>
 
