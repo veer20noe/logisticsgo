@@ -15,18 +15,30 @@ background:#ffffff;
 color:#222;
 }
 
+/* HEADER */
 header{
 background:#fff;
 text-align:center;
-padding:30px 20px 20px;
+padding:25px 20px;
 box-shadow:0 4px 20px rgba(0,0,0,0.05);
 position:sticky;
 top:0;
 z-index:1000;
+transition:all 0.3s ease;
 }
 
 header img{
-height:75px;
+height:130px;
+transition:all 0.3s ease;
+}
+
+/* SHRINK EFFECT */
+header.shrink{
+padding:10px 20px;
+}
+
+header.shrink img{
+height:80px;
 }
 
 /* HERO */
@@ -139,11 +151,6 @@ font-size:15px;
 color:#555;
 }
 
-.cities{
-line-height:1.8;
-font-weight:500;
-}
-
 footer{
 background:#111;
 color:#fff;
@@ -160,13 +167,19 @@ font-size:30px;
 .card{
 width:90%;
 }
+header img{
+height:100px;
+}
+header.shrink img{
+height:70px;
+}
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<header id="mainHeader">
 <img src="logo.png" alt="LogisticsGo Logo">
 </header>
 
@@ -184,7 +197,6 @@ width:90%;
 <h2>Our Services</h2>
 
 <div class="grid">
-
 <div class="card">
 <img src="car.png" alt="Car Transport">
 <h3>Car Transport</h3>
@@ -202,30 +214,24 @@ width:90%;
 <h3>Household Shifting</h3>
 <p>Reliable relocation solutions with trained staff.</p>
 </div>
-
 </div>
-</div>
-
-<div class="section" style="background:#f8f9fc;">
-<h2>Serving All Major Cities</h2>
-<p class="cities">
-Delhi | Mumbai | Bangalore | Chennai | Hyderabad | Pune | Ahmedabad | Jaipur | Kolkata | Chandigarh | Lucknow | Indore | Surat | Bhopal & More
-</p>
-</div>
-
-<div class="section">
-<h2>Contact Us</h2>
-<p><strong>Phone:</strong> 9896505929</p>
-<p><strong>Email:</strong> logisticsgopvtltd@gmail.com</p>
-<p>Serving All Over India</p>
 </div>
 
 <footer>
 <h3>LogisticsGo</h3>
 <p>Safe • Fast • Reliable Vehicle Transport</p>
-<p>📞 9896505929 | 📧 logisticsgopvtltd@gmail.com</p>
-<p>© 2026 LogisticsGo. All Rights Reserved.</p>
 </footer>
+
+<script>
+window.addEventListener("scroll", function() {
+  var header = document.getElementById("mainHeader");
+  if (window.scrollY > 50) {
+    header.classList.add("shrink");
+  } else {
+    header.classList.remove("shrink");
+  }
+});
+</script>
 
 </body>
 </html>
