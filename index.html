@@ -3,103 +3,91 @@
 <head>
 <title>LogisticsGo - Safe Fast Reliable Transport</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 html{scroll-behavior:smooth;}
 body{
 margin:0;
 font-family:'Montserrat', sans-serif;
 background:#ffffff;
-color:#111;
+color:#222;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
-position:sticky;
+position:fixed;
 top:0;
-z-index:1000;
+width:100%;
+padding:25px 20px;
 text-align:center;
-padding:30px 20px;
-background:rgba(255,255,255,0.75);
-backdrop-filter:blur(15px);
-transition:all 0.35s ease;
-box-shadow:0 5px 30px rgba(0,0,0,0.05);
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+transition:0.4s;
+z-index:1000;
 }
 
 header img{
-height:170px;
-transition:all 0.35s ease;
+height:90px;
+transition:0.4s;
 }
 
-header.shrink{
-padding:12px 20px;
-}
-
-header.shrink img{
-height:85px;
-}
-
-/* ===== HERO ===== */
+/* HERO */
 .hero{
-padding:160px 20px 130px;
+padding:200px 20px 140px 20px;
 text-align:center;
-background:linear-gradient(180deg,#f5f7fb,#ffffff);
+background:#f8f9fc;
 }
 
 .hero h1{
-font-size:46px;
-font-weight:700;
-margin-bottom:25px;
+font-size:42px;
+font-weight:800;
+margin-bottom:20px;
 }
 
 .hero p{
-font-size:19px;
+font-size:18px;
 color:#555;
-margin-bottom:50px;
+margin-bottom:40px;
 }
 
 .hero-buttons{
 display:flex;
 justify-content:center;
-gap:25px;
+gap:20px;
 flex-wrap:wrap;
 }
 
 .btn{
-padding:16px 45px;
-border-radius:60px;
+padding:16px 40px;
+border-radius:40px;
 font-weight:600;
 text-decoration:none;
-transition:all 0.3s ease;
+transition:0.3s;
 }
 
-/* Call Button */
 .btn-call{
-background:#e60000;
+background:red;
 color:#fff;
-border:none;
 }
 
 .btn-call:hover{
-transform:translateY(-4px);
-box-shadow:0 15px 35px rgba(230,0,0,0.4);
+background:#cc0000;
 }
 
-/* WhatsApp Button */
 .btn-whatsapp{
-background:#fff;
-color:#e60000;
-border:2px solid #e60000;
+background:red;
+color:#fff;
 }
 
 .btn-whatsapp:hover{
-background:#e60000;
-color:#fff;
-transform:translateY(-4px);
+background:#cc0000;
 }
 
-/* ===== SERVICES ===== */
+/* SERVICES */
 .section{
 padding:120px 20px;
 max-width:1200px;
@@ -108,101 +96,123 @@ text-align:center;
 }
 
 .section h2{
-font-size:38px;
-margin-bottom:70px;
+font-size:34px;
+margin-bottom:60px;
 }
 
 .grid{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:50px;
+gap:40px;
 }
 
 .card{
 background:#fff;
-padding:40px 35px 50px;
-width:340px;
-border-radius:25px;
-box-shadow:0 20px 50px rgba(0,0,0,0.06);
-transition:all 0.35s ease;
+width:320px;
+padding:30px;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
+transition:0.4s;
 }
 
 .card:hover{
 transform:translateY(-12px);
-box-shadow:0 30px 60px rgba(0,0,0,0.12);
 }
 
 .card img{
 width:100%;
-height:240px;
+height:220px;
 object-fit:contain;
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
 .card h3{
-margin-bottom:18px;
-font-size:24px;
+margin-bottom:15px;
 }
 
 .card p{
-font-size:15px;
 color:#555;
-line-height:1.6;
+font-size:15px;
 }
 
-/* ===== CONTACT SECTION ===== */
-.contact{
-background:#f4f6fb;
-padding:130px 20px;
-}
-
-.contact-box{
-max-width:750px;
-margin:auto;
-background:#fff;
-padding:60px 50px;
-border-radius:25px;
-box-shadow:0 25px 60px rgba(0,0,0,0.08);
+/* CONTACT SIMPLE */
+.contact-simple{
+padding:100px 20px;
 text-align:center;
-}
-
-.contact-box h2{
-font-size:36px;
-margin-bottom:35px;
-}
-
-.contact-box p{
+background:#f8f9fc;
 font-size:18px;
-margin:12px 0;
 }
 
-/* ===== FOOTER ===== */
+.contact-simple p{
+margin:10px 0;
+}
+
+.serving-text{
+color:#555;
+}
+
+/* FOOTER */
 footer{
-background:#0d0d0d;
+background:#111;
 color:#fff;
-padding:50px 20px;
 text-align:center;
+padding:60px 20px;
+}
+
+footer h3{
+font-size:26px;
+margin-bottom:20px;
 }
 
 footer p{
-opacity:0.7;
+margin:10px 0;
+opacity:0.8;
+}
+
+.copyright{
+margin-top:20px;
+opacity:0.6;
 font-size:14px;
 }
 
-/* ===== MOBILE ===== */
+/* MOBILE */
 @media(max-width:768px){
-.hero h1{font-size:30px;}
-.card{width:90%;}
-header img{height:130px;}
-header.shrink img{height:75px;}
+
+.hero h1{
+font-size:30px;
 }
+
+.card{
+width:90%;
+}
+
+header img{
+height:75px;
+}
+
+}
+
+/* SCROLL EFFECT */
+window.addEventListener("scroll", function() {
+  let header = document.querySelector("header");
+  let logo = document.querySelector("header img");
+
+  if (window.scrollY > 50) {
+    header.style.padding = "15px 20px";
+    logo.style.height = "65px";
+  } else {
+    header.style.padding = "25px 20px";
+    logo.style.height = "90px";
+  }
+});
+
 </style>
 </head>
 
 <body>
 
-<header id="mainHeader">
+<header>
 <img src="logo.png" alt="LogisticsGo Logo">
 </header>
 
@@ -218,52 +228,41 @@ header.shrink img{height:75px;}
 
 <div class="section">
 <h2>Our Services</h2>
+
 <div class="grid">
 
 <div class="card">
-<img src="car.png">
+<img src="car.png" alt="Car Transport">
 <h3>Car Transport</h3>
-<p>Safe & insured car carrier services across all major cities in India.</p>
+<p>Safe & insured car carrier services across India.</p>
 </div>
 
 <div class="card">
-<img src="bike.png">
+<img src="bike.png" alt="Bike Transport">
 <h3>Bike Transport</h3>
-<p>Professional packing and secure delivery with full safety assurance.</p>
+<p>Professional packing and secure delivery for complete safety.</p>
 </div>
 
 <div class="card">
-<img src="house.png">
+<img src="house.png" alt="House Relocation">
 <h3>Household Shifting</h3>
-<p>Complete relocation solutions handled by trained professionals.</p>
+<p>Reliable relocation solutions with trained staff.</p>
 </div>
 
 </div>
 </div>
 
-<div class="contact">
-<div class="contact-box">
-<h2>Contact Us</h2>
-<p><strong>Phone:</strong> 9896505929</p>
+<div class="contact-simple">
 <p><strong>Email:</strong> logisticsgopvtltd@gmail.com</p>
-<p>Serving All Over India</p>
-</div>
+<p class="serving-text">Serving All Over India</p>
 </div>
 
 <footer>
-<p>© 2026 LogisticsGo. All Rights Reserved.</p>
+<h3>LogisticsGo</h3>
+<p>Safe • Fast • Reliable Vehicle Transport</p>
+<p>📞 9896505929 | ✉ logisticsgopvtltd@gmail.com</p>
+<p class="copyright">© 2026 LogisticsGo. All Rights Reserved.</p>
 </footer>
-
-<script>
-window.addEventListener("scroll", function() {
-  var header = document.getElementById("mainHeader");
-  if (window.scrollY > 60) {
-    header.classList.add("shrink");
-  } else {
-    header.classList.remove("shrink");
-  }
-});
-</script>
 
 </body>
 </html>
