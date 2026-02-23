@@ -6,24 +6,10 @@
 
 <title>Best Vehicle Transport Company in Gurugram | Logistics Go</title>
 
-<meta name="description" content="Logistics Go is a trusted vehicle transport company in Gurugram offering safe and reliable car and bike transportation services across India.">
-<meta name="keywords" content="Car Bike Transport India, Packers and Movers in Gurugram, Vehicle Transport Company, Best Movers in Delhi NCR">
+<meta name="description" content="Logistics Go provides safe and reliable car and bike transport services across India from Gurugram. Affordable and insured vehicle relocation.">
+<meta name="keywords" content="Car Bike Transport India, Packers and Movers in Gurugram, Best Movers in Delhi NCR">
 <meta name="author" content="Logistics Go">
 <link rel="canonical" href="https://logisticsgo.in">
-
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Organization",
- "name": "Logistics Go",
- "url": "https://logisticsgo.in",
- "contactPoint": {
-   "@type": "ContactPoint",
-   "telephone": "+91-9896505929",
-   "contactType": "customer service"
- }
-}
-</script>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
@@ -31,7 +17,7 @@
 html{scroll-behavior:smooth;}
 body{
 margin:0;
-font-family:'Montserrat',sans-serif;
+font-family:'Montserrat', sans-serif;
 background:#ffffff;
 color:#222;
 }
@@ -44,30 +30,33 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 60px;
+padding:25px 60px;
 background:rgba(255,255,255,0.95);
 backdrop-filter:blur(12px);
 z-index:1000;
+transition:0.3s;
 }
-header img{height:80px;}
+header img{
+height:200px;
+transition:0.3s ease;
+}
 nav a{
 margin-left:25px;
 text-decoration:none;
 color:#222;
 font-weight:600;
 font-size:14px;
-transition:0.3s;
 }
 nav a:hover{color:red;}
 
 /* HERO */
 .hero{
-padding:200px 20px 140px;
+padding:320px 20px 140px;
 text-align:center;
 background:#f8f9fc;
 }
 .hero h1{
-font-size:42px;
+font-size:44px;
 font-weight:800;
 margin-bottom:20px;
 }
@@ -76,15 +65,21 @@ font-size:18px;
 color:#555;
 margin-bottom:40px;
 }
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
 .btn{
 padding:16px 42px;
 border-radius:40px;
 font-weight:600;
 text-decoration:none;
-margin:10px;
-display:inline-block;
+transition:0.3s;
 }
 .btn-call{background:red;color:#fff;}
+.btn-call:hover{background:#cc0000;}
 .btn-whatsapp{background:#fff;color:red;border:2px solid red;}
 .btn-whatsapp:hover{background:red;color:#fff;}
 
@@ -103,34 +98,85 @@ opacity:1;
 transform:translateY(0);
 }
 
+.grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+}
+.card{
+background:#fff;
+width:320px;
+padding:30px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+.card:hover{
+transform:translateY(-10px);
+}
+.card img{
+width:100%;
+height:220px;
+object-fit:contain;
+margin-bottom:20px;
+}
+
 /* STATS */
 .stats{
 display:flex;
 justify-content:center;
-gap:70px;
+gap:80px;
 flex-wrap:wrap;
 }
 .stat-number{
 font-size:48px;
-color:red;
 font-weight:800;
+color:red;
+margin-bottom:10px;
+}
+
+/* FORM */
+.form-box{
+max-width:600px;
+margin:auto;
+}
+.form-box input,
+.form-box textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ddd;
+font-family:inherit;
+}
+.form-box button{
+background:red;
+color:#fff;
+padding:14px;
+border:none;
+border-radius:30px;
+width:100%;
+font-weight:600;
+cursor:pointer;
 }
 
 /* FAQ */
 .faq-item{
 border-bottom:1px solid #ddd;
-padding:15px 0;
+padding:18px 0;
 cursor:pointer;
 }
 .faq-question{
 display:flex;
 justify-content:space-between;
 font-weight:600;
+font-size:18px;
 }
 .faq-answer{
 display:none;
+padding-top:10px;
 color:#555;
-padding-top:8px;
 }
 
 /* FOOTER */
@@ -163,14 +209,15 @@ font-size:14px;
 .copyright{
 text-align:center;
 margin-top:40px;
-color:#777;
-font-size:13px;
+font-size:14px;
+color:#888;
 }
 
 @media(max-width:768px){
-header{padding:15px 20px;}
+.hero h1{font-size:30px;}
+.card{width:90%;}
+header img{height:150px;}
 nav{display:none;}
-.stats{gap:30px;}
 }
 </style>
 </head>
@@ -178,37 +225,54 @@ nav{display:none;}
 <body>
 
 <header>
-<img src="logo.png" alt="Logistics Go">
+<img id="logo" src="logo.png" alt="LogisticsGo Logo">
 <nav>
 <a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#features">Features</a>
 <a href="#faq">FAQs</a>
+<a href="#contact">Contact</a>
 </nav>
 </header>
 
 <div class="hero">
 <h1>Safe • Fast • Reliable Vehicle Transport Across India</h1>
 <p>Door-to-Door Car & Bike Transport Services with Insurance & Professional Handling</p>
+<div class="hero-buttons">
 <a href="tel:9896505929" class="btn btn-call">Call Now</a>
 <a href="https://wa.me/919896505929" class="btn btn-whatsapp">WhatsApp</a>
+</div>
+</div>
+
+<!-- SERVICES -->
+<div class="section">
+<h2>Our Services</h2>
+<div class="grid">
+<div class="card">
+<img src="car.png">
+<h3>Car Transport</h3>
+<p>Safe & insured car carrier services across India.</p>
+</div>
+<div class="card">
+<img src="bike.png">
+<h3>Bike Transport</h3>
+<p>Professional packing and secure delivery.</p>
+</div>
+<div class="card">
+<img src="house.png">
+<h3>Household Shifting</h3>
+<p>Reliable relocation solutions with trained staff.</p>
+</div>
+</div>
 </div>
 
 <!-- ABOUT -->
 <div class="section" id="about">
 <h2>About Us</h2>
-
 <p><strong>Logistics Go</strong> is a trusted and professional vehicle transport company based in Gurugram, Haryana. We specialize in safe, secure, and timely car and bike transportation services across India.</p>
-
-<p>With years of hands-on logistics experience and a dedicated operations team, we focus primarily on damage-free vehicle relocation. Whether you need to transport your car to another state or shift your bike to a different city, our structured handling process ensures complete safety at every step.</p>
-
-<p>Unlike traditional shifting companies, Logistics Go emphasizes professional vehicle carriers, secure loading techniques, and systematic coordination to deliver vehicles safely and on schedule.</p>
-
-<p>Serving Delhi NCR and major cities nationwide, we have built a strong reputation as one of the dependable vehicle transport service providers known for reliability, transparency, and customer satisfaction.</p>
-
+<p>With years of hands-on logistics experience and a dedicated operations team, we focus primarily on damage-free vehicle relocation.</p>
 <p><strong>Head Office:</strong> Gurugram, Haryana, India</p>
 <p><strong>Our Mission:</strong> To provide safe, fast, and affordable vehicle transport solutions with complete peace of mind.</p>
-
 </div>
 
 <!-- FEATURES -->
@@ -224,19 +288,21 @@ nav{display:none;}
 <!-- FAQ -->
 <div class="section" id="faq">
 <h2>FAQs</h2>
-
 <div class="faq-item">
 <div class="faq-question">What is insurance coverage based on? <span>+</span></div>
-<div class="faq-answer">
-At the declared value, which can be easily calculated from the field officer's assistant.
+<div class="faq-answer">At the declared value, which can be easily calculated from the field officer's assistant.</div>
 </div>
 </div>
 
+<!-- CONTACT -->
+<div class="section" id="contact">
+<h2>Contact Us</h2>
+<p><strong>Phone:</strong> 9896505929</p>
+<p><strong>Email:</strong> logisticsgopvtltd@gmail.com</p>
 </div>
 
 <footer>
 <div class="footer-container">
-
 <div class="footer-col">
 <h4>USEFUL LINKS</h4>
 <a href="#">Enquire Now</a>
@@ -247,7 +313,6 @@ At the declared value, which can be easily calculated from the field officer's a
 <a href="#">Terms & Conditions</a>
 <a href="#">Privacy Policy</a>
 </div>
-
 <div class="footer-col">
 <h4>OUR SERVICES</h4>
 <a href="#">International Shifting</a>
@@ -259,28 +324,26 @@ At the declared value, which can be easily calculated from the field officer's a
 <a href="#">Commercial Moving</a>
 <a href="#">Furniture Shifting</a>
 </div>
-
-<div class="footer-col">
-<h4>CONTACT</h4>
-<a href="tel:9896505929">9896505929</a>
-<a href="mailto:logisticsgopvtltd@gmail.com">logisticsgopvtltd@gmail.com</a>
 </div>
-
-</div>
-
 <div class="copyright">
-© 2026 Logistics Go. All Rights Reserved.
+© 2026 LogisticsGo. All Rights Reserved.
 </div>
 </footer>
 
 <script>
-const sections=document.querySelectorAll(".section");
-window.addEventListener("scroll",()=>{
-sections.forEach(sec=>{
-if(sec.getBoundingClientRect().top<window.innerHeight-100){
-sec.classList.add("show");
-}
-});
+window.addEventListener("scroll", function() {
+  const logo = document.getElementById("logo");
+  if (window.scrollY > 50) {
+    logo.style.height = "150px";
+  } else {
+    logo.style.height = "200px";
+  }
+
+  document.querySelectorAll(".section").forEach(sec=>{
+    if(sec.getBoundingClientRect().top<window.innerHeight-100){
+      sec.classList.add("show");
+    }
+  });
 });
 
 document.querySelectorAll(".faq-item").forEach(item=>{
@@ -290,7 +353,6 @@ ans.style.display=ans.style.display==="block"?"none":"block";
 });
 });
 
-/* Stats Counter */
 const counters=document.querySelectorAll(".stat-number");
 counters.forEach(counter=>{
 let update=()=>{
