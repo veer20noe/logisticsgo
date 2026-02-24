@@ -416,8 +416,19 @@ window.addEventListener("scroll", function() {
 });
 document.querySelectorAll(".faq-item").forEach(item=>{
 item.addEventListener("click",()=>{
+
+document.querySelectorAll(".faq-item").forEach(i=>{
+if(i!==item){
+i.classList.remove("active");
+i.querySelector(".faq-answer").style.display="none";
+}
+});
+
+item.classList.toggle("active");
+
 const ans=item.querySelector(".faq-answer");
-ans.style.display=ans.style.display==="block"?"none":"block";
+ans.style.display = ans.style.display==="block" ? "none" : "block";
+
 });
 });
 const counters=document.querySelectorAll(".stat-number");
